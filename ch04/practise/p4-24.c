@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int i , j, typ;
+
+    puts("画一个金字塔");
+    printf("金字塔有几层："); scanf("%d", &typ);
+
+    for (i = 1; i <= typ; i ++) {
+        for (j = 1; j <= typ-i; j++)
+            putchar(' ');
+        for (j =1 ; j <= (i-1)*2+1; j++)
+            putchar('*');
+        putchar('\n');
+    }
+
+    return 0;
+}
